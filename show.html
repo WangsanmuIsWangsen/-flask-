@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+</head>
+<body>
+  <form name="return" action="/">
+      <tr>
+             <td></td>
+             <td><input type="submit" value="返回"></td>
+      </tr>
+  </form>
+  {% for url in urllist %}   <!--需要将urllist搞成双元素-->
+      <img src="{{url}}" width="800" height="400">
+  {% endfor %}
+  <!-- <a href="{{url_for('static',filename='all/ELE-AL00_10.0.0.39(C00E17R1P6log)_com.android.systemui_1.xlsx')}}">下载excel</a>   -->
+</body>
+</html>

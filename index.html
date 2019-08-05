@@ -1,0 +1,38 @@
+<!doctype html>
+
+<head>
+    <title>可视化展示</title>
+</head>
+<body>
+  <form name="select_verision" action="/show" method="post">
+      <tr>
+
+          是否查看全部：<input type="checkbox" name="checkBox" value="1">
+          <input type="hidden" name="checkBox" value="0">
+      </tr>
+      <tr>
+      <span>
+      全部：<select id="select_allversion" name="select_allversion" size="1" class="sel">
+           <option value="" selected="selected">-请选择版本-</option>
+           {% for k in allProduct %}
+           <option value={{k}}>{{k}}</option>
+           {% endfor %}
+       </select>
+  </span>
+
+      <span>
+      <select id="select_allpackge" name="select_allpackge" size="1" class="sel">
+          <option value="" selected="selected">-请选择包名-</option>
+           {% for v in allPackge %}
+           <option value={{v}}>{{v}}</option>
+           {% endfor %}
+       </select>
+  </span>
+</tr>
+       <tr>
+             <td></td>
+             <td><input type="submit" value="筛选"></td>
+      </tr>
+  </form>
+
+</body>
